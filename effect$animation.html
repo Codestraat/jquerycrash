@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Crash Course </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        #box{
+            background-color: #333;
+            color: #fff;
+            width: 500px;
+            height: 90px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #box2{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jquery Crash Course Effects and Animation</h1>
+    </header>
+    
+    <div id="container">
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeTog">Fade Toggle</button>
+
+        <hr>
+        <div id="box">Hello World</div>
+
+        <button id="btnslideOut">Slide Out</button>
+        <button id="btnslideIn">Slide In</button>
+        <button id="btnslideTog">Fade Toggle</button>
+        <button id="btnstop">Stop</button>
+        
+
+        <hr>
+        <button id="moveLeft">Move Left</button>
+        <button id="moveRight">Move Right</button>
+        <button id="moveAround">Move Around</button>
+        <div id="box2"></div>
+        
+
+    </div>
+
+
+
+<script>
+$(document).ready(function(){
+
+    /*
+    $('#btnFadeOut').click(function(){
+        $('#box').fadeOut(3000);
+          
+    });
+
+    $('#btnFadeIn').click(function(){
+        $('#box').fadeIn(3000);
+          
+    });
+
+    $('#btnFadeTog').click(function(){
+        $('#box').fadeToggle(3000);
+          
+    });
+
+    $('#btnslideOut').click(function(){
+        $('#box').slideOut(3000);
+          
+    });
+
+    $('#btnslideIn').click(function(){
+        $('#box').slideIn(3000);
+          
+    });
+
+    $('#btnslideTog').click(function(){
+        $('#box').slideToggle(3000);
+});
+$('#btnstop').click(function(){
+    $('#box').
+})
+*/
+
+$('#moveRight').click(function(){
+   $('#box2').animate({left:500,
+                        height:'300px',
+                        width: '300px',
+                        opacity: '0.5'                                             
+});
+});
+
+$('#moveLeft').click(function(){
+   $('#box2').animate({left:0,
+                      height:'100px',
+                      width:'100px',
+                      opacity:'1' 
+});
+});
+
+$('#moveAround').click(function(){
+    var box = $('#box2');
+    box.animate({
+        left: 300
+    });
+    box.animate({
+        top: 300
+    });
+    box.animate({
+        left: 0,
+        top: 300
+    });
+})
+
+
+});
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>
